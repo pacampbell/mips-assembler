@@ -1,0 +1,10 @@
+{
+  "author": "Paul Campbell <paul.campbell@stonybrook.edu>",
+  "name": "mips-assembler",
+  "description": "Utility for assembling mips source code",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies" : {
+    "jison": "0.4.x"
+  }
+}
