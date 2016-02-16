@@ -1,0 +1,13 @@
+[
+    {
+        "name": "add",
+        "type": {
+            "name": "r",
+            "opcode": "0x0",
+            "func": "0x20"
+        },
+        "hint": "add rd rs rt",
+        "description": "rd = rs + rt",
+        "fields": ["rd", "rs", "rt"]
+    }
+]
