@@ -9,5 +9,234 @@
         "hint": "add rd rs rt",
         "description": "rd = rs + rt",
         "fields": ["rd", "rs", "rt"]
+    },
+    {
+        "name": "addi",
+        "type": {
+            "name": "i",
+            "opcode": "0x8"
+        },
+        "hint": "addi rs, rt, immed16",
+        "description": "rs = rt + immed16",
+        "fields": ["rs", "rt", "immed16"]
+    },
+    {
+        "name": "addiu"
+    },
+    {
+        "name": "addu"
+    },
+    {
+        "name": "and"
+    },
+    {
+        "name": "andi"
+    },
+    {
+        "name": "beq"
+    },
+    {
+        "name": "bne"
+    },
+    {
+        "name": "blez"
+    },
+    {
+        "name": "bgtz"
+    },
+    {
+        "name": "break"
+    },
+    {
+        "name": "cache"
+    },
+    {
+        "name": "div"
+    },
+    {
+        "name": "divu"
+    },
+    {
+        "name": "j"
+    },
+    {
+        "name": "jal"
+    },
+    {
+        "name": "jalr"
+    },
+    {
+        "name": "jr"
+    },
+    {
+        "name": "lb"
+    },
+    {
+        "name": "lbu"
+    },
+    {
+        "name": "ldc1"
+    },
+    {
+        "name": "ldc2"
+    },
+    {
+        "name": "lh"
+    },
+    {
+        "name": "lhu"
+    },
+    {
+        "name": "ll"
+    },
+    {
+        "name": "lui"
+    },
+    {
+        "name": "lw"
+    },
+    {
+        "name": "lwc1"
+    },
+    {
+        "name": "lwc2"
+    },
+    {
+        "name": "lwl"
+    },
+    {
+        "name": "lwr"
+    },
+    {
+        "name": "mfhi"
+    },
+    {
+        "name": "mflo"
+    },
+    {
+        "name": "movn"
+    },
+    {
+        "name": "movz"
+    },
+    {
+        "name": "mthi"
+    },
+    {
+        "name": "mtlo"
+    },
+    {
+        "name": "mult"
+    },
+    {
+        "name": "multu"
+    },
+    {
+        "name": "nor"
+    },
+    {
+        "name": "or"
+    },
+    {
+        "name": "ori"
+    },
+    {
+        "name": "pref"
+    },
+    {
+        "name": "slt"
+    },
+    {
+        "name": "sb"
+    },
+    {
+        "name": "sc"
+    },
+    {
+        "name": "sdc1"
+    },
+    {
+        "name": "sdc2"
+    },
+    {
+        "name": "sh"
+    },
+    {
+        "name": "slti"
+    },
+    {
+        "name": "sltiu"
+    },
+    {
+        "name": "sltu"
+    },
+    {
+        "name": "sll"
+    },
+    {
+        "name": "sllv"
+    },
+    {
+        "name": "sra"
+    },
+    {
+        "name": "srav"
+    },
+    {
+        "name": "srl"
+    },
+    {
+        "name": "srlv"
+    },
+    {
+        "name": "sw"
+    },
+    {
+        "name": "swc1"
+    },
+    {
+        "name": "swc2"
+    },
+    {
+        "name": "swl"
+    },
+    {
+        "name": "swr"
+    },
+    {
+        "name": "sub"
+    },
+    {
+        "name": "subu"
+    },
+    {
+        "name": "sync"
+    },
+    {
+        "name": "syscall"
+    },
+    {
+        "name": "tge"
+    },
+    {
+        "name": "tgeu"
+    },
+    {
+        "name": "teq"
+    },
+    {
+        "name": "tne"
+    },
+    {
+        "name": "tlt"
+    },
+    {
+        "name": "tltu"
+    },
+    {
+        "name": "xor"
+    },
+    {
+        "name": "xori"
     }
 ]

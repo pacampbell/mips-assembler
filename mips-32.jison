@@ -49,8 +49,8 @@
                 rs: 0x0,
                 rt: 0x0,
                 shamt: 0x0,
-                immediate16: 0x0,
-                address26: 0x0
+                immed16: 0x0,
+                addr26: 0x0
             };
             // Begin looping through the field
             for (var f in instruction.fields) {
@@ -70,18 +70,29 @@
             if (instruction.type.name === 'r') {
                 machinecode = assembler.createRType(
                     parseInt(instruction.type.opcode, 16),
-                    positions.rd,
                     positions.rs,
                     positions.rt,
+                    positions.rd,
                     positions.shamt,
                     parseInt(instruction.type.func, 16)
                 );
-                console.log('0x' + machinecode.toString('16'));
             } else if (instruction.type.name === 'i') {
+                machinecode = assembler.createIType(
+                    parseInt(instruction.type.opcode, 16),
+                    positions.rs,
+                    positions.rt,
+                    positions.immed16
+                );
             } else if (instruction.type.name === 'j') {
+                machinecode = assembler.createJType(
+                    parseInt(instruction.type.opcode, 16),
+                    positions.addr26
+                );
             } else {
                 // TODO: Malformed format in instruction config file
             }
+            // Print the machine code for now
+            console.log('0x' + machinecode.toString('16'));
         } else if (instruction === null) {
             // console.log("ERROR:Line" + lineno + ": Instruction not found - " + $1 + " " + $2 + ", " + $4)
         } else {
@@ -110,7 +121,7 @@ statement:
             // Make sure the instruction was set
             assemble(yy, instruction, [$2, $4]);
         }}
-    | MNEMONIC REGISTER COMMA REGISTER COMMA NUMBER
+    | MNEMONIC REGISTER COMMA REGISTER COMMA number
         {{
             // Search for the instruction
             var instruction = containsInstruction($1, instructionset);
